@@ -1,3 +1,4 @@
+
 # ERS-P1-Skeleton
 This repository contains the skeleton for the P1 design.  
 The [milestones.md](./milestones.md) document outlines progress metrics that you can follow. 
@@ -37,4 +38,3 @@ Presentation date: Thursday, February 3, 2022
 - AJAX / Fetch API
 - HTML
 - CSS / Bootstrap
-
