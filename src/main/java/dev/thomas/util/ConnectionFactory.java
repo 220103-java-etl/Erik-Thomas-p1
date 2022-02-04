@@ -43,9 +43,17 @@ public class ConnectionFactory {
      * <p>The {@link ConnectionFactory#getConnection()} method is responsible for leveraging a specific Database Driver to obtain an instance of the {@link java.sql.Connection} interface.</p>
      * <p>Typically, this is accomplished via the use of the {@link java.sql.DriverManager} class.</p>
      */
-    public Connection getConnection() {
+    public static Connection getConnection() {
+
+        try {
+            Class.forName(dbProps.getProperty("driver"));
+        }catch(ClassNotFoundException e){
+            e.printStackTrace();
+        }
 
         Connection conn = null;
+
+
 
         String url = dbProps.getProperty("url");
         String username = dbProps.getProperty("username");
@@ -59,4 +67,21 @@ public class ConnectionFactory {
 
         return conn;
     }
+    public static void main(String[] args) {
+
+        Connection connection = getInstance().getConnection();
+
+        try {
+            if (connection != null) {
+                System.out.println("Connection Successful");
+                connection.close();
+            }
+            else {
+                System.out.println("Something went wrong..");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }
+

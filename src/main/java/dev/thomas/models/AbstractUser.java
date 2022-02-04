@@ -22,6 +22,8 @@ import java.util.Objects;
 public class AbstractUser {
 
     protected int id;
+    private String firstName;
+    private String lastName;
     private String username;
     private String password;
     private String role;
@@ -38,16 +40,11 @@ public class AbstractUser {
         this.role = role;
     }
 
-    public AbstractUser(int id, String firstName, String lastName, String username, String password) {
-        super();
-        this.id = id;
-        this.username = username;
-        this.password = password;
-    }
-
     public AbstractUser(int id, String firstName, String lastName, String username, String password, String role) {
         super();
         this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.username = username;
         this.password = password;
         this.role = role;
@@ -56,15 +53,22 @@ public class AbstractUser {
     public int getId() {
         return id;
     }
-
     public void setId(int id) {
         this.id = id;
     }
 
-    public String getUsername() {
-        return username;
+    public String getFirstName() {
+        return firstName;
     }
 
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getUsername()
+    {
+        return username;
+    }
     public void setUsername(String username) {
         this.username = username;
     }
@@ -72,17 +76,12 @@ public class AbstractUser {
     public String getPassword() {
         return password;
     }
-
     public void setPassword(String password) {
         this.password = password;
     }
 
     public String getRole() {
         return role;
-    }
-
-    public void setRole(String role) {
-        this.role = role;
     }
 
     @Override

@@ -16,19 +16,23 @@ package dev.thomas.models;
  */
 public class User extends AbstractUser {
 
-    public User() {
-        super();
-    }
-
     /**
      * This includes the minimum parameters needed for the {@link dev.thomas.models.AbstractUser} class.
      * If other fields are needed, please create additional constructors.
      */
+    //For Servlets
+    public User() {
+        super();
+    }
+    //From Abstract User
     public User(int id, String username, String password, String role) {
         super(id, username, password, role);
     }
 
+
+    //For UserDAO
     public User(int id, String firstName, String lastName, String username, String password, String role) {
         super(id, firstName, lastName, username, password, role);
     }
+
 }

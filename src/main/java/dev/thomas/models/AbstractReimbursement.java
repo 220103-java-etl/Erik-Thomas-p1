@@ -25,60 +25,52 @@ public class AbstractReimbursement {
     private Status status;
     private User author;
     private User resolver;
-    private double amount;
+    private int amount;
+
 
     public AbstractReimbursement() {
         super();
     }
 
-    public AbstractReimbursement(int id, Status status, User author, User resolver, double amount) {
+    public AbstractReimbursement(int id, Status status, User author, User resolver, int amount, String date, String time, String location, String description, String justification) {
         super();
         this.id = id;
         this.status = status;
         this.author = author;
         this.resolver = resolver;
         this.amount = amount;
+
     }
 
     public int getId() {
         return id;
     }
-
     public void setId(int id) {
         this.id = id;
+    }
+
+    public int getAmount() {
+        return amount;
+    }
+    public void setAmount(int amount) {
+        this.amount = amount;
     }
 
     public Status getStatus() {
         return status;
     }
 
-    public void setStatus(Status status) {
-        this.status = status;
-    }
-
     public User getAuthor() {
         return author;
-    }
-
-    public void setAuthor(User author) {
-        this.author = author;
     }
 
     public User getResolver() {
         return resolver;
     }
 
-    public void setResolver(User resolver) {
-        this.resolver = resolver;
-    }
 
-    public double getAmount() {
-        return amount;
-    }
 
-    public void setAmount(double amount) {
-        this.amount = amount;
-    }
+
 
     @Override
     public boolean equals(Object o) {

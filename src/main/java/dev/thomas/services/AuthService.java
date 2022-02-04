@@ -1,10 +1,9 @@
 package dev.thomas.services;
 
-import java.util.Optional;
-
-import dev.thomas.services.UserService;
 import dev.thomas.models.User;
 import dev.thomas.repositories.UserDAO;
+
+import java.util.Optional;
 
 /**
  * The AuthService should handle login and registration for the ERS application.
@@ -29,20 +28,20 @@ public class AuthService {
      *     <li>Must return user object if the user logs in successfully.</li>
      * </ul>
      */
-    private UserDAO userDAO = new UserDAO();
+    private final UserDAO userDAO = new UserDAO();
 
-    public boolean login(String username, String password) {
+    public User login(String username, String password) {
 
-        User u = userDAO.getByUsername(username);
+        User u = UserDAO.getByUsername(username);
 
         if (u != null) {
 
             if (username.equals(u.getUsername()) && password.equals(u.getPassword())) {
-                return true;
+                return u;
             }
         }
         System.out.println("Credentials do not match");
-        return false;
+        return null;
     }
 
     /**
