@@ -78,7 +78,7 @@
     </configuration>
     <configuration name="Driver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="dev.thomas.Driver" />
-      <module name="Erik-Thomas-p2-main" />
+      <module name="Erik-Thomas-p1" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="dev.thomas.*" />

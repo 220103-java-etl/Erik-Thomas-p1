@@ -1,10 +1,9 @@
 package dev.thomas.services;
 
-import java.util.Optional;
-
-import dev.thomas.services.UserService;
 import dev.thomas.models.User;
 import dev.thomas.repositories.UserDAO;
+
+import java.util.Optional;
 
 /**
  * The AuthService should handle login and registration for the ERS application.

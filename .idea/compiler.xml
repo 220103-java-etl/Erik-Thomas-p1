@@ -6,7 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Erik-Thomas-p2-main" />
+        <module name="Erik-Thomas-p1" />
         <module name="Erik-Thomas-p1" />
       </profile>
     </annotationProcessing>
